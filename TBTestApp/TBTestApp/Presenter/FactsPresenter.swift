@@ -10,21 +10,22 @@ class FactsPresenter: FactsPresenting {
     
     // MARK: - Private variables
     
-    private let factsProviderService = FactsProviderService()
+    private let factsProvider: FactsProviding!
     
     private weak var display: FactsDisplaying!
     
     // MARK: - Init
     
-    init(display: FactsDisplaying) {
+    init(display: FactsDisplaying, factsProvider: FactsProviding) {
         self.display = display
+        self.factsProvider = factsProvider
     }
     
     // MARK: - FactsPresenting
     
     func viewDidBecomeVisible() {
         
-        factsProviderService.fetchFactsData { [weak display] (data, error) in
+        factsProvider.fetchFactsData { [weak display] (data, error) in
             
             guard error == nil else {
                 display?.showErrorMessage("Something went wrong. Please try after sometime.")

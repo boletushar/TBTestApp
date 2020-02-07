@@ -10,9 +10,10 @@ import UIKit
 
 final class FactsTableViewController: UITableViewController {
     
-    // MARK: - Private variables
+    // Injectables
+    var presenter: FactsPresenting?
     
-    private var presenter: FactsPresenting?
+    // MARK: - Private variables
     
     private var facts: [Fact] = []
     
@@ -24,7 +25,7 @@ final class FactsTableViewController: UITableViewController {
         super.loadView()
         configureUI()
         
-        presenter = FactsPresenter(display: self)
+        // Fetch the data
         presenter?.viewDidBecomeVisible()
     }
     

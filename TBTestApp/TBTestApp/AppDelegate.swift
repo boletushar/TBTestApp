@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
+        
+        // Register your classes with dependency injection container
+        let container = Container()
+        FactsDIContainer().registerClasses(with: container)
 
-        let viewController = FactsTableViewController()
+        let viewController = container.resolve(FactsDisplaying.self) as! FactsTableViewController
         let navigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

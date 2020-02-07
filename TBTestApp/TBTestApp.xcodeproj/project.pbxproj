@@ -19,6 +19,7 @@
 		C3E8DE8323ED1543000CBFEE /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8223ED1543000CBFEE /* FactTableViewCell.swift */; };
 		C3E8DE8523ED1F75000CBFEE /* FactsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8423ED1F75000CBFEE /* FactsProviding.swift */; };
 		C3E8DE8823ED1FAF000CBFEE /* FactsProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8723ED1FAF000CBFEE /* FactsProviderService.swift */; };
+		C3E8DE8F23ED3871000CBFEE /* FactsDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8E23ED3871000CBFEE /* FactsDIContainer.swift */; };
 		EC536AA608B6270ED910CB80 /* Pods_TBTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7308932D511F07A1C09686D /* Pods_TBTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		C3E8DE8223ED1543000CBFEE /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
 		C3E8DE8423ED1F75000CBFEE /* FactsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsProviding.swift; sourceTree = "<group>"; };
 		C3E8DE8723ED1FAF000CBFEE /* FactsProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsProviderService.swift; sourceTree = "<group>"; };
+		C3E8DE8E23ED3871000CBFEE /* FactsDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsDIContainer.swift; sourceTree = "<group>"; };
 		CB2384AB63396C6AB51A3777 /* Pods-TBTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBTestApp.debug.xcconfig"; path = "Target Support Files/Pods-TBTestApp/Pods-TBTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E7308932D511F07A1C09686D /* Pods_TBTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TBTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 		C3E8DE5D23ED0C86000CBFEE /* TBTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				C3E8DE8D23ED3856000CBFEE /* Container */,
 				C3E8DE8623ED1F99000CBFEE /* Network */,
 				C3E8DE7D23ED11B6000CBFEE /* Protocol */,
 				C3E8DE7823ED0F05000CBFEE /* Model */,
@@ -147,6 +150,14 @@
 				C3E8DE8723ED1FAF000CBFEE /* FactsProviderService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C3E8DE8D23ED3856000CBFEE /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				C3E8DE8E23ED3871000CBFEE /* FactsDIContainer.swift */,
+			);
+			path = Container;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +283,7 @@
 				C3E8DE8823ED1FAF000CBFEE /* FactsProviderService.swift in Sources */,
 				C3E8DE8523ED1F75000CBFEE /* FactsProviding.swift in Sources */,
 				C3E8DE7423ED0E91000CBFEE /* FactsTableViewController.swift in Sources */,
+				C3E8DE8F23ED3871000CBFEE /* FactsDIContainer.swift in Sources */,
 				C3E8DE7723ED0F00000CBFEE /* FactsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
