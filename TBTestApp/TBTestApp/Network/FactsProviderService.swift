@@ -30,12 +30,19 @@ enum FactsError: Error {
 
 class FactsProviderService: FactsProviding {
 
+    // MARK: - Private variables
+    
     private let factsAPI =
         "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
     
     // Function to fetch facts data
     func fetchFactsData(
         callback:@escaping (_ result: FactsData?, _ error : FactsError?) -> ()) {
+        
+        guard NetworkMonitor.isConnectedToNetwork() else {
+            callback(nil, FactsError.networkUnavailable)
+            return
+        }
         
         guard let url = URL(string: factsAPI) else {
             callback(nil, FactsError.genericError)

@@ -105,10 +105,10 @@ extension FactsTableViewController: FactsDisplaying {
     func showErrorMessage(_ message: String) {
         
         stopRefreshAnimation()
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             AlertError.showMessage(
-                title: NSLocalizedString("dialog.title", comment: ""),
-                msg: message)
+            title: NSLocalizedString("dialog.title", comment: ""),
+            msg: message)
         }
     }
 }
