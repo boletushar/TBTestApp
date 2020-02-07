@@ -41,3 +41,27 @@ final class FactsTableViewController: UITableViewController {
         return cell
     }
 }
+
+// MARK: - FactsDisplaying
+
+extension FactsTableViewController: FactsDisplaying {
+    
+    func setDisplayData(_ data: FactsData) {
+        
+        facts = data.rows
+        
+        DispatchQueue.main.async {
+            // Stop animation of Refresh control if started
+            self.refreshControl?.endRefreshing()
+            
+            // Set the title of the screen
+            self.title = data.title
+            // Refresh table view
+            self.tableView.reloadData()
+        }
+    }
+    
+    func showErrorMessage(_ message: String) {
+        // TODO: - Add Alert box code
+    }
+}
