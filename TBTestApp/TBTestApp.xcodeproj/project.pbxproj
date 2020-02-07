@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CDDDE86407983CF3991DC03 /* Pods_TBTestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4266236D47302207008C85C1 /* Pods_TBTestAppTests.framework */; };
 		C3E8DE5F23ED0C86000CBFEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE5E23ED0C86000CBFEE /* AppDelegate.swift */; };
 		C3E8DE6823ED0C89000CBFEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3E8DE6723ED0C89000CBFEE /* Assets.xcassets */; };
 		C3E8DE6B23ED0C89000CBFEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E8DE6923ED0C89000CBFEE /* LaunchScreen.storyboard */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4266236D47302207008C85C1 /* Pods_TBTestAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TBTestAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4404D57ABA6ED29366044208 /* Pods-TBTestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBTestAppTests.release.xcconfig"; path = "Target Support Files/Pods-TBTestAppTests/Pods-TBTestAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		91297A701C7C1905569A9791 /* Pods-TBTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBTestApp.release.xcconfig"; path = "Target Support Files/Pods-TBTestApp/Pods-TBTestApp.release.xcconfig"; sourceTree = "<group>"; };
 		C3E8DE5B23ED0C86000CBFEE /* TBTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E8DE5E23ED0C86000CBFEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		C3E8DEB023ED652F000CBFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB2384AB63396C6AB51A3777 /* Pods-TBTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBTestApp.debug.xcconfig"; path = "Target Support Files/Pods-TBTestApp/Pods-TBTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E7308932D511F07A1C09686D /* Pods_TBTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TBTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC0859B0C5DE662F0C8F827B /* Pods-TBTestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBTestAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TBTestAppTests/Pods-TBTestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CDDDE86407983CF3991DC03 /* Pods_TBTestAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,8 @@
 			children = (
 				CB2384AB63396C6AB51A3777 /* Pods-TBTestApp.debug.xcconfig */,
 				91297A701C7C1905569A9791 /* Pods-TBTestApp.release.xcconfig */,
+				EC0859B0C5DE662F0C8F827B /* Pods-TBTestAppTests.debug.xcconfig */,
+				4404D57ABA6ED29366044208 /* Pods-TBTestAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -96,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				E7308932D511F07A1C09686D /* Pods_TBTestApp.framework */,
+				4266236D47302207008C85C1 /* Pods_TBTestAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3E8DEB523ED652F000CBFEE /* Build configuration list for PBXNativeTarget "TBTestAppTests" */;
 			buildPhases = (
+				62B66D4420EEB9634A4705F1 /* [CP] Check Pods Manifest.lock */,
 				C3E8DEA823ED652F000CBFEE /* Sources */,
 				C3E8DEA923ED652F000CBFEE /* Frameworks */,
 				C3E8DEAA23ED652F000CBFEE /* Resources */,
@@ -308,6 +317,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		62B66D4420EEB9634A4705F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TBTestAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6BB13AB209366BC4B7595AB5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -562,6 +593,7 @@
 		};
 		C3E8DEB323ED652F000CBFEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC0859B0C5DE662F0C8F827B /* Pods-TBTestAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -582,6 +614,7 @@
 		};
 		C3E8DEB423ED652F000CBFEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4404D57ABA6ED29366044208 /* Pods-TBTestAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
