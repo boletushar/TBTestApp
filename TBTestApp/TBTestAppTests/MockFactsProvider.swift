@@ -33,3 +33,10 @@ class MockNetworkErrorFactsProvider : FactsProviding {
         callback(nil, FactsError.networkUnavailable)
     }
 }
+
+class MockServerErrorFactsProvider : FactsProviding {
+    
+    func fetchFactsData(callback: @escaping (FactsData?, FactsError?) -> ()) {
+        callback(nil, FactsError.serverError(statusCode: 500))
+    }
+}
