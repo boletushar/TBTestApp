@@ -14,6 +14,8 @@
 		C3E8DE7723ED0F00000CBFEE /* FactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE7623ED0F00000CBFEE /* FactsPresenter.swift */; };
 		C3E8DE7A23ED0F5B000CBFEE /* FactsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE7923ED0F5B000CBFEE /* FactsData.swift */; };
 		C3E8DE7C23ED0F64000CBFEE /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE7B23ED0F64000CBFEE /* Fact.swift */; };
+		C3E8DE7F23ED11E1000CBFEE /* FactsPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE7E23ED11E1000CBFEE /* FactsPresenting.swift */; };
+		C3E8DE8123ED11EF000CBFEE /* FactsDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8023ED11EF000CBFEE /* FactsDisplaying.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C3E8DE7623ED0F00000CBFEE /* FactsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPresenter.swift; sourceTree = "<group>"; };
 		C3E8DE7923ED0F5B000CBFEE /* FactsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsData.swift; sourceTree = "<group>"; };
 		C3E8DE7B23ED0F64000CBFEE /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		C3E8DE7E23ED11E1000CBFEE /* FactsPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPresenting.swift; sourceTree = "<group>"; };
+		C3E8DE8023ED11EF000CBFEE /* FactsDisplaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsDisplaying.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		C3E8DE5D23ED0C86000CBFEE /* TBTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				C3E8DE7D23ED11B6000CBFEE /* Protocol */,
 				C3E8DE7823ED0F05000CBFEE /* Model */,
 				C3E8DE7523ED0EEE000CBFEE /* Presenter */,
 				C3E8DE7223ED0E54000CBFEE /* View */,
@@ -92,6 +97,15 @@
 				C3E8DE7B23ED0F64000CBFEE /* Fact.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C3E8DE7D23ED11B6000CBFEE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C3E8DE7E23ED11E1000CBFEE /* FactsPresenting.swift */,
+				C3E8DE8023ED11EF000CBFEE /* FactsDisplaying.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +180,8 @@
 			files = (
 				C3E8DE5F23ED0C86000CBFEE /* AppDelegate.swift in Sources */,
 				C3E8DE7A23ED0F5B000CBFEE /* FactsData.swift in Sources */,
+				C3E8DE8123ED11EF000CBFEE /* FactsDisplaying.swift in Sources */,
+				C3E8DE7F23ED11E1000CBFEE /* FactsPresenting.swift in Sources */,
 				C3E8DE7C23ED0F64000CBFEE /* Fact.swift in Sources */,
 				C3E8DE7423ED0E91000CBFEE /* FactsTableViewController.swift in Sources */,
 				C3E8DE7723ED0F00000CBFEE /* FactsPresenter.swift in Sources */,
