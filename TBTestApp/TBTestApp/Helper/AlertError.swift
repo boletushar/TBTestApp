@@ -6,14 +6,19 @@
 //  Copyright © 2020 Tushar Bole. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class AlertError {
 
     static func showMessage(title: String, msg: String) {
         
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertController.Style.alert)
+        let action = UIAlertAction(
+            title: NSLocalizedString("dialog.ok", comment: ""),
+            style: UIAlertAction.Style.default,
+            handler: nil)
+        alert.addAction(action)
         UIApplication.topViewController()?.present(alert, animated: true, completion: nil)
     }
 }

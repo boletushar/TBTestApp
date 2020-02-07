@@ -45,6 +45,14 @@ final class FactsTableViewController: UITableViewController {
             for: UIControl.Event.valueChanged)
     }
     
+    private func stopRefreshAnimation() {
+        
+        DispatchQueue.main.async {
+            // Stop animation of Refresh control if started
+            self.refreshControl?.endRefreshing()
+        }
+    }
+    
     /// Objective C Function
     ///
     /// Fucntion to perform refresh action
@@ -82,11 +90,10 @@ extension FactsTableViewController: FactsDisplaying {
     
     func setDisplayData(_ data: FactsData) {
         
+        stopRefreshAnimation()
         facts = data.rows
         
         DispatchQueue.main.async {
-            // Stop animation of Refresh control if started
-            self.refreshControl?.endRefreshing()
             
             // Set the title of the screen
             self.title = data.title
@@ -96,6 +103,12 @@ extension FactsTableViewController: FactsDisplaying {
     }
     
     func showErrorMessage(_ message: String) {
-        // TODO: - Add Alert box code
+        
+        stopRefreshAnimation()
+        DispatchQueue.main.async {
+            AlertError.showMessage(
+                title: NSLocalizedString("dialog.title", comment: ""),
+                msg: message)
+        }
     }
 }
