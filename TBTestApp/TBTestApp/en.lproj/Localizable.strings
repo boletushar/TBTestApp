@@ -9,5 +9,5 @@
 "dialog.title"="Error";
 "dialog.ok"="Ok";
 "error.message.network"="It appears you are not connected to internet. Please connect to internet and retry.";
-"error.message.server"="Something went wrong. Retry after sometime.";
-"error.message.generic"="Oops we have hit a snag. Retry after sometime";
+"error.message.server"="Oops we have hit a snag. Retry after sometime.";
+"error.message.generic"="Something went wrong. Retry after sometime.";
