@@ -8,29 +8,36 @@
 
 import UIKit
 
-class FactsTableViewController: UITableViewController {
+final class FactsTableViewController: UITableViewController {
+    
+    // MARK: - Private variables
+    
+    private var facts: [Fact] = []
+    
+    private let cellIdentifier = "factsCell"
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // MARK: - View life cycle
+    
+    override func loadView() {
+        super.loadView()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return facts.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         return cell
     }
-    */
 }
