@@ -16,6 +16,7 @@
 		C3E8DE7C23ED0F64000CBFEE /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE7B23ED0F64000CBFEE /* Fact.swift */; };
 		C3E8DE7F23ED11E1000CBFEE /* FactsPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE7E23ED11E1000CBFEE /* FactsPresenting.swift */; };
 		C3E8DE8123ED11EF000CBFEE /* FactsDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8023ED11EF000CBFEE /* FactsDisplaying.swift */; };
+		C3E8DE8323ED1543000CBFEE /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8223ED1543000CBFEE /* FactTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C3E8DE7B23ED0F64000CBFEE /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		C3E8DE7E23ED11E1000CBFEE /* FactsPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPresenting.swift; sourceTree = "<group>"; };
 		C3E8DE8023ED11EF000CBFEE /* FactsDisplaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsDisplaying.swift; sourceTree = "<group>"; };
+		C3E8DE8223ED1543000CBFEE /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				C3E8DE7323ED0E91000CBFEE /* FactsTableViewController.swift */,
+				C3E8DE8223ED1543000CBFEE /* FactTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				C3E8DE5F23ED0C86000CBFEE /* AppDelegate.swift in Sources */,
 				C3E8DE7A23ED0F5B000CBFEE /* FactsData.swift in Sources */,
 				C3E8DE8123ED11EF000CBFEE /* FactsDisplaying.swift in Sources */,
+				C3E8DE8323ED1543000CBFEE /* FactTableViewCell.swift in Sources */,
 				C3E8DE7F23ED11E1000CBFEE /* FactsPresenting.swift in Sources */,
 				C3E8DE7C23ED0F64000CBFEE /* Fact.swift in Sources */,
 				C3E8DE7423ED0E91000CBFEE /* FactsTableViewController.swift in Sources */,
