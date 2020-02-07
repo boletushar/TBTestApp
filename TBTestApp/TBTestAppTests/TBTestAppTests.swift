@@ -84,4 +84,26 @@ class TBTestAppTests: XCTestCase {
         XCTAssertTrue(mockDisplay.errorMessage.isEmpty,
                       "Unexpected error message returned")
     }
+    
+    func testAPI_NetworkFailure() {
+        let expectation = self.expectation(
+            description: "Testing when API fails")
+        mockDisplay.expectation = expectation
+        
+        presenter = FactsPresenter(
+            display: mockDisplay,
+            factsProvider: MockNetworkErrorFactsProvider())
+        presenter?.viewDidBecomeVisible()
+        wait(for: [expectation], timeout: 5)
+        
+        XCTAssertTrue(
+            mockDisplay.title.isEmpty,
+            "Unexpected title not empty string")
+        XCTAssertTrue(
+            mockDisplay.facts.isEmpty,
+            "Unexpected facts not empty array")
+        XCTAssertEqual(
+            mockDisplay.errorMessage,
+            "It appears you are not connected to internet. Please connect to internet and retry.")
+    }
 }

@@ -26,3 +26,10 @@ class MockSuccessFactsProvider : FactsProviding {
         callback(data, nil)
     }
 }
+
+class MockNetworkErrorFactsProvider : FactsProviding {
+    
+    func fetchFactsData(callback: @escaping (FactsData?, FactsError?) -> ()) {
+        callback(nil, FactsError.networkUnavailable)
+    }
+}
