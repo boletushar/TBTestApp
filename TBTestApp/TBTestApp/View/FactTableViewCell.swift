@@ -92,6 +92,10 @@ final class FactTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        factImageView.image = nil
+    }
+    
     func configure(_ fact: Fact) {
         factTitleLabel.text = fact.title
         factDescriptionLabel.text = fact.description
