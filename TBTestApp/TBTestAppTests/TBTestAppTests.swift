@@ -13,18 +13,23 @@ import Swinject
 class TBTestAppTests: XCTestCase {
     
     var presenter: FactsPresenting?
+    var mockDisplay: MockFactsDisplay!
     
     let container = Container()
 
     override func setUp() {
         // Put setup code here. This method is called before the
         // invocation of each test method in the class.
+        super.setUp()
+        
+        mockDisplay = MockFactsDisplay()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the
         // invocation of each test method in the class.
         presenter = nil
+        mockDisplay = nil
     }
     
     func mockRegistration() {
@@ -59,5 +64,24 @@ class TBTestAppTests: XCTestCase {
         
         let factsProvider = container.resolve(FactsProviding.self)
         XCTAssertTrue(factsProvider != nil, "")
+    }
+    
+    func testAPI_Success() {
+        let expectation = self.expectation(
+            description: "Testing API returns the title field in the response")
+        mockDisplay.expectation = expectation
+        
+        presenter = FactsPresenter(
+            display: mockDisplay,
+            factsProvider: MockSuccessFactsProvider())
+        presenter?.viewDidBecomeVisible()
+        wait(for: [expectation], timeout: 5)
+        
+        XCTAssertEqual(mockDisplay.title,
+                       "About Canada",
+                       "Unexpected title returned")
+        XCTAssertTrue(!mockDisplay.facts.isEmpty, "Response returned no facts")
+        XCTAssertTrue(mockDisplay.errorMessage.isEmpty,
+                      "Unexpected error message returned")
     }
 }

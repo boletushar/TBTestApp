@@ -25,6 +25,8 @@
 		C3E8DE9723ED527F000CBFEE /* AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE9623ED527F000CBFEE /* AlertError.swift */; };
 		C3E8DE9923ED5FAE000CBFEE /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE9823ED5FAE000CBFEE /* NetworkMonitor.swift */; };
 		C3E8DEAF23ED652F000CBFEE /* TBTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DEAE23ED652F000CBFEE /* TBTestAppTests.swift */; };
+		C3E8DEB723ED676E000CBFEE /* MockFactsDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DEB623ED676E000CBFEE /* MockFactsDisplay.swift */; };
+		C3E8DEB923ED67F3000CBFEE /* MockFactsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DEB823ED67F3000CBFEE /* MockFactsProvider.swift */; };
 		EC536AA608B6270ED910CB80 /* Pods_TBTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7308932D511F07A1C09686D /* Pods_TBTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		C3E8DEAC23ED652F000CBFEE /* TBTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E8DEAE23ED652F000CBFEE /* TBTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBTestAppTests.swift; sourceTree = "<group>"; };
 		C3E8DEB023ED652F000CBFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3E8DEB623ED676E000CBFEE /* MockFactsDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFactsDisplay.swift; sourceTree = "<group>"; };
+		C3E8DEB823ED67F3000CBFEE /* MockFactsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFactsProvider.swift; sourceTree = "<group>"; };
 		CB2384AB63396C6AB51A3777 /* Pods-TBTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBTestApp.debug.xcconfig"; path = "Target Support Files/Pods-TBTestApp/Pods-TBTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E7308932D511F07A1C09686D /* Pods_TBTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TBTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0859B0C5DE662F0C8F827B /* Pods-TBTestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBTestAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TBTestAppTests/Pods-TBTestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 			children = (
 				C3E8DEAE23ED652F000CBFEE /* TBTestAppTests.swift */,
 				C3E8DEB023ED652F000CBFEE /* Info.plist */,
+				C3E8DEB623ED676E000CBFEE /* MockFactsDisplay.swift */,
+				C3E8DEB823ED67F3000CBFEE /* MockFactsProvider.swift */,
 			);
 			path = TBTestAppTests;
 			sourceTree = "<group>";
@@ -405,7 +411,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E8DEB723ED676E000CBFEE /* MockFactsDisplay.swift in Sources */,
 				C3E8DEAF23ED652F000CBFEE /* TBTestAppTests.swift in Sources */,
+				C3E8DEB923ED67F3000CBFEE /* MockFactsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
