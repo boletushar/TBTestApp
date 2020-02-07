@@ -127,6 +127,29 @@ class TBTestAppTests: XCTestCase {
             "Unexpected facts not empty array")
         XCTAssertEqual(
             mockDisplay.errorMessage,
+            "Oops we have hit a snag. Retry after sometime.")
+    }
+    
+    func testAPI_GenericError() {
+        
+        let expectation = self.expectation(
+            description: "Testing API returns the facts field in the response")
+        mockDisplay.expectation = expectation
+        
+        presenter = FactsPresenter(
+            display: mockDisplay,
+            factsProvider: MockGenericErrorFactsProvider())
+        presenter?.viewDidBecomeVisible()
+        wait(for: [expectation], timeout: 5)
+        
+        XCTAssertTrue(
+            mockDisplay.title.isEmpty,
+            "Unexpected title not empty string")
+        XCTAssertTrue(
+            mockDisplay.facts.isEmpty,
+            "Unexpected facts not empty array")
+        XCTAssertEqual(
+            mockDisplay.errorMessage,
             "Something went wrong. Retry after sometime.")
     }
 }
