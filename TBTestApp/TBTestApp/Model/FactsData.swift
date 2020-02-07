@@ -10,6 +10,9 @@ import Foundation
 
 struct FactsData: Codable {
     
+    /// String title used to show screen title
     let title: String
+    
+    /// Array of Fact which will be listed on screen
     let rows: [Fact]
 }
