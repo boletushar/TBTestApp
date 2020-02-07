@@ -10,7 +10,7 @@ import Foundation
 
 /// FactsError defining different type while fetching Facts from API
 enum FactsError: Error {
-    case network
+    case networkUnavailable
     case serverError(statusCode: Int)
     case parsingError
 }
@@ -34,8 +34,12 @@ class FactsProviderService: FactsProviding {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            if let response = response as? HTTPURLResponse,
-                200...299 ~= response.statusCode {
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
+                callback(nil, FactsError.networkUnavailable)
+                return
+            }
+            
+            if 200...299 ~= statusCode {
                 
                 guard let dataResponse = data, error == nil else {
                     callback(nil, nil)
@@ -59,8 +63,7 @@ class FactsProviderService: FactsProviding {
                 callback(result, nil)
                 
             } else {
-                let code = (response as? HTTPURLResponse)?.statusCode ?? 500
-                callback(nil, FactsError.serverError(statusCode: code))
+                callback(nil, FactsError.serverError(statusCode: statusCode))
             }
         }.resume()
     }
