@@ -30,10 +30,26 @@ final class FactsTableViewController: UITableViewController {
     }
     
     private func configureUI() {
+        // Register custom TableView cell for use
         tableView.register(
             FactTableViewCell.self,
             forCellReuseIdentifier: cellIdentifier)
         tableView.separatorInset = .zero
+        
+        // Initialise the Refresh control
+        refreshControl = UIRefreshControl()
+        // Set action for refresh control when user pull down the list
+        refreshControl?.addTarget(
+            self,
+            action: #selector(refresh),
+            for: UIControl.Event.valueChanged)
+    }
+    
+    /// Objective C Function
+    ///
+    /// Fucntion to perform refresh action
+    @objc func refresh() {
+        presenter?.viewDidBecomeVisible()
     }
 
     // MARK: - Table view data source
