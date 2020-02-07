@@ -17,6 +17,8 @@
 		C3E8DE7F23ED11E1000CBFEE /* FactsPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE7E23ED11E1000CBFEE /* FactsPresenting.swift */; };
 		C3E8DE8123ED11EF000CBFEE /* FactsDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8023ED11EF000CBFEE /* FactsDisplaying.swift */; };
 		C3E8DE8323ED1543000CBFEE /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8223ED1543000CBFEE /* FactTableViewCell.swift */; };
+		C3E8DE8523ED1F75000CBFEE /* FactsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8423ED1F75000CBFEE /* FactsProviding.swift */; };
+		C3E8DE8823ED1FAF000CBFEE /* FactsProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8723ED1FAF000CBFEE /* FactsProviderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		C3E8DE7E23ED11E1000CBFEE /* FactsPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPresenting.swift; sourceTree = "<group>"; };
 		C3E8DE8023ED11EF000CBFEE /* FactsDisplaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsDisplaying.swift; sourceTree = "<group>"; };
 		C3E8DE8223ED1543000CBFEE /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
+		C3E8DE8423ED1F75000CBFEE /* FactsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsProviding.swift; sourceTree = "<group>"; };
+		C3E8DE8723ED1FAF000CBFEE /* FactsProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsProviderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		C3E8DE5D23ED0C86000CBFEE /* TBTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				C3E8DE8623ED1F99000CBFEE /* Network */,
 				C3E8DE7D23ED11B6000CBFEE /* Protocol */,
 				C3E8DE7823ED0F05000CBFEE /* Model */,
 				C3E8DE7523ED0EEE000CBFEE /* Presenter */,
@@ -107,8 +112,17 @@
 			children = (
 				C3E8DE7E23ED11E1000CBFEE /* FactsPresenting.swift */,
 				C3E8DE8023ED11EF000CBFEE /* FactsDisplaying.swift */,
+				C3E8DE8423ED1F75000CBFEE /* FactsProviding.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C3E8DE8623ED1F99000CBFEE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C3E8DE8723ED1FAF000CBFEE /* FactsProviderService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +201,8 @@
 				C3E8DE8323ED1543000CBFEE /* FactTableViewCell.swift in Sources */,
 				C3E8DE7F23ED11E1000CBFEE /* FactsPresenting.swift in Sources */,
 				C3E8DE7C23ED0F64000CBFEE /* Fact.swift in Sources */,
+				C3E8DE8823ED1FAF000CBFEE /* FactsProviderService.swift in Sources */,
+				C3E8DE8523ED1F75000CBFEE /* FactsProviding.swift in Sources */,
 				C3E8DE7423ED0E91000CBFEE /* FactsTableViewController.swift in Sources */,
 				C3E8DE7723ED0F00000CBFEE /* FactsPresenter.swift in Sources */,
 			);
