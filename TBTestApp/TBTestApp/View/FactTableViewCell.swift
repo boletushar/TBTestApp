@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class FactTableViewCell: UITableViewCell {
     
@@ -94,5 +95,9 @@ final class FactTableViewCell: UITableViewCell {
     func configure(_ fact: Fact) {
         factTitleLabel.text = fact.title
         factDescriptionLabel.text = fact.description
+        
+        if let url = URL(string: fact.imageHref ?? "") {
+            factImageView.kf.setImage(with: url)
+        }
     }
 }
