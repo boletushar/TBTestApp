@@ -19,7 +19,6 @@
 		C3E8DE8323ED1543000CBFEE /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8223ED1543000CBFEE /* FactTableViewCell.swift */; };
 		C3E8DE8523ED1F75000CBFEE /* FactsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8423ED1F75000CBFEE /* FactsProviding.swift */; };
 		C3E8DE8823ED1FAF000CBFEE /* FactsProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8723ED1FAF000CBFEE /* FactsProviderService.swift */; };
-		C3E8DE8C23ED319B000CBFEE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8B23ED319B000CBFEE /* NetworkManager.swift */; };
 		EC536AA608B6270ED910CB80 /* Pods_TBTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7308932D511F07A1C09686D /* Pods_TBTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +38,6 @@
 		C3E8DE8223ED1543000CBFEE /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
 		C3E8DE8423ED1F75000CBFEE /* FactsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsProviding.swift; sourceTree = "<group>"; };
 		C3E8DE8723ED1FAF000CBFEE /* FactsProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsProviderService.swift; sourceTree = "<group>"; };
-		C3E8DE8B23ED319B000CBFEE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CB2384AB63396C6AB51A3777 /* Pods-TBTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBTestApp.debug.xcconfig"; path = "Target Support Files/Pods-TBTestApp/Pods-TBTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E7308932D511F07A1C09686D /* Pods_TBTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TBTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				C3E8DE8723ED1FAF000CBFEE /* FactsProviderService.swift */,
-				C3E8DE8B23ED319B000CBFEE /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -270,7 +267,6 @@
 				C3E8DE7A23ED0F5B000CBFEE /* FactsData.swift in Sources */,
 				C3E8DE8123ED11EF000CBFEE /* FactsDisplaying.swift in Sources */,
 				C3E8DE8323ED1543000CBFEE /* FactTableViewCell.swift in Sources */,
-				C3E8DE8C23ED319B000CBFEE /* NetworkManager.swift in Sources */,
 				C3E8DE7F23ED11E1000CBFEE /* FactsPresenting.swift in Sources */,
 				C3E8DE7C23ED0F64000CBFEE /* Fact.swift in Sources */,
 				C3E8DE8823ED1FAF000CBFEE /* FactsProviderService.swift in Sources */,
