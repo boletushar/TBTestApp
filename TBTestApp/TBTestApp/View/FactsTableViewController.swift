@@ -12,6 +12,8 @@ final class FactsTableViewController: UITableViewController {
     
     // MARK: - Private variables
     
+    private var presenter: FactsPresenting?
+    
     private var facts: [Fact] = []
     
     private let cellIdentifier = "factsCell"
@@ -20,6 +22,17 @@ final class FactsTableViewController: UITableViewController {
     
     override func loadView() {
         super.loadView()
+        configureUI()
+        
+        presenter = FactsPresenter(display: self)
+        presenter?.viewDidBecomeVisible()
+    }
+    
+    private func configureUI() {
+        tableView.register(
+            FactTableViewCell.self,
+            forCellReuseIdentifier: cellIdentifier)
+        tableView.separatorInset = .zero
     }
 
     // MARK: - Table view data source
@@ -37,7 +50,11 @@ final class FactsTableViewController: UITableViewController {
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: cellIdentifier,
+            for: indexPath) as! FactTableViewCell
+        let fact = facts[indexPath.row]
+        cell.configure(fact)
         return cell
     }
 }
