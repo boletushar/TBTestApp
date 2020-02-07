@@ -20,6 +20,8 @@
 		C3E8DE8523ED1F75000CBFEE /* FactsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8423ED1F75000CBFEE /* FactsProviding.swift */; };
 		C3E8DE8823ED1FAF000CBFEE /* FactsProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8723ED1FAF000CBFEE /* FactsProviderService.swift */; };
 		C3E8DE8F23ED3871000CBFEE /* FactsDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE8E23ED3871000CBFEE /* FactsDIContainer.swift */; };
+		C3E8DE9223ED4B8D000CBFEE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3E8DE9423ED4B8D000CBFEE /* Localizable.strings */; };
+		C3E8DE9723ED527F000CBFEE /* AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE9623ED527F000CBFEE /* AlertError.swift */; };
 		EC536AA608B6270ED910CB80 /* Pods_TBTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7308932D511F07A1C09686D /* Pods_TBTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		C3E8DE8423ED1F75000CBFEE /* FactsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsProviding.swift; sourceTree = "<group>"; };
 		C3E8DE8723ED1FAF000CBFEE /* FactsProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsProviderService.swift; sourceTree = "<group>"; };
 		C3E8DE8E23ED3871000CBFEE /* FactsDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsDIContainer.swift; sourceTree = "<group>"; };
+		C3E8DE9323ED4B8D000CBFEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C3E8DE9623ED527F000CBFEE /* AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertError.swift; sourceTree = "<group>"; };
 		CB2384AB63396C6AB51A3777 /* Pods-TBTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBTestApp.debug.xcconfig"; path = "Target Support Files/Pods-TBTestApp/Pods-TBTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E7308932D511F07A1C09686D /* Pods_TBTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TBTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +98,7 @@
 		C3E8DE5D23ED0C86000CBFEE /* TBTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				C3E8DE9523ED526F000CBFEE /* Helper */,
 				C3E8DE8D23ED3856000CBFEE /* Container */,
 				C3E8DE8623ED1F99000CBFEE /* Network */,
 				C3E8DE7D23ED11B6000CBFEE /* Protocol */,
@@ -104,6 +109,7 @@
 				C3E8DE6723ED0C89000CBFEE /* Assets.xcassets */,
 				C3E8DE6923ED0C89000CBFEE /* LaunchScreen.storyboard */,
 				C3E8DE6C23ED0C89000CBFEE /* Info.plist */,
+				C3E8DE9423ED4B8D000CBFEE /* Localizable.strings */,
 			);
 			path = TBTestApp;
 			sourceTree = "<group>";
@@ -158,6 +164,14 @@
 				C3E8DE8E23ED3871000CBFEE /* FactsDIContainer.swift */,
 			);
 			path = Container;
+			sourceTree = "<group>";
+		};
+		C3E8DE9523ED526F000CBFEE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C3E8DE9623ED527F000CBFEE /* AlertError.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3E8DE6B23ED0C89000CBFEE /* LaunchScreen.storyboard in Resources */,
+				C3E8DE9223ED4B8D000CBFEE /* Localizable.strings in Resources */,
 				C3E8DE6823ED0C89000CBFEE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +294,7 @@
 				C3E8DE8123ED11EF000CBFEE /* FactsDisplaying.swift in Sources */,
 				C3E8DE8323ED1543000CBFEE /* FactTableViewCell.swift in Sources */,
 				C3E8DE7F23ED11E1000CBFEE /* FactsPresenting.swift in Sources */,
+				C3E8DE9723ED527F000CBFEE /* AlertError.swift in Sources */,
 				C3E8DE7C23ED0F64000CBFEE /* Fact.swift in Sources */,
 				C3E8DE8823ED1FAF000CBFEE /* FactsProviderService.swift in Sources */,
 				C3E8DE8523ED1F75000CBFEE /* FactsProviding.swift in Sources */,
@@ -297,6 +313,14 @@
 				C3E8DE6A23ED0C89000CBFEE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C3E8DE9423ED4B8D000CBFEE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3E8DE9323ED4B8D000CBFEE /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

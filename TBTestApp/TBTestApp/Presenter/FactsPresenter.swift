@@ -27,13 +27,13 @@ class FactsPresenter: FactsPresenting {
         
         factsProvider.fetchFactsData { [weak display] (data, error) in
             
-            guard error == nil else {
-                display?.showErrorMessage("Something went wrong. Please try after sometime.")
+            if let error = error {
+                display?.showErrorMessage(error.localizedDescription)
                 return
             }
             
             guard let data = data else {
-                display?.showErrorMessage("Server error. Please try after sometime.")
+                display?.showErrorMessage(FactsError.genericError.localizedDescription)
                 return
             }
             

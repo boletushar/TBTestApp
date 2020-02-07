@@ -13,6 +13,19 @@ enum FactsError: Error {
     case networkUnavailable
     case serverError(statusCode: Int)
     case parsingError
+    case genericError
+    
+    var localizedDescription: String {
+        switch self {
+        case .networkUnavailable:
+            return NSLocalizedString("error.message.network", comment: "No internet connection")
+        case .serverError(statusCode: _):
+            return NSLocalizedString("error.message.server", comment: "Server error message")
+        case .genericError,
+             .parsingError:
+            return NSLocalizedString("error.message.generic", comment: "Server error message")
+        }
+    }
 }
 
 class FactsProviderService: FactsProviding {
@@ -22,10 +35,10 @@ class FactsProviderService: FactsProviding {
     
     // Function to fetch facts data
     func fetchFactsData(
-        callback:@escaping (_ result: FactsData?, _ error : Error?) -> ()) {
+        callback:@escaping (_ result: FactsData?, _ error : FactsError?) -> ()) {
         
         guard let url = URL(string: factsAPI) else {
-            callback(nil, nil)
+            callback(nil, FactsError.genericError)
             return
         }
         
@@ -42,7 +55,7 @@ class FactsProviderService: FactsProviding {
             if 200...299 ~= statusCode {
                 
                 guard let dataResponse = data, error == nil else {
-                    callback(nil, nil)
+                    callback(nil, FactsError.serverError(statusCode: 0))
                     return
                 }
                     

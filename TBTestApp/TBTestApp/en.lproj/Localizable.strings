@@ -5,3 +5,8 @@
   Created by Tushar Bole on 7/2/20.
   Copyright © 2020 Tushar Bole. All rights reserved.
 */
+
+"error.title"="Error";
+"error.message.network"="It appears you are not connected to internet. Please connect to internet and retry.";
+"error.message.server"="Something went wrong. Retry after sometime.";
+"error.message.generic"="Oops we have hit a snag. Retry after sometime";
