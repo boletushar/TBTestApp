@@ -6,7 +6,7 @@
 //  Copyright © 2020 Tushar Bole. All rights reserved.
 //
 
-protocol FactsDisplaying {
+protocol FactsDisplaying: AnyObject {
     
     /// Ask display to set the display data
     /// - Parameter data: data of type FactsData received from API
