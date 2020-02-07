@@ -7,5 +7,6 @@ target 'TBTestApp' do
 
   # Pods for TBTestApp
   pod 'Kingfisher', '~> 5.0'
+  pod 'ReachabilitySwift'
 
 end
