@@ -8,6 +8,7 @@ target 'TBTestApp' do
   # Pods for TBTestApp
   pod 'Kingfisher', '~> 5.0'
   pod 'Swinject'
+  pod 'SwiftLint'
   
   target 'TBTestAppTests' do
     inherit! :search_paths
