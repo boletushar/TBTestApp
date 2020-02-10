@@ -7,7 +7,7 @@
 //
 
 protocol FactsPresenting {
-    
+
     /// Tell presenter that view is visible and ready to perform next action
     func viewDidBecomeVisible()
 }

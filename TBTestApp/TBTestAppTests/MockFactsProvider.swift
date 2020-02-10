@@ -11,8 +11,8 @@ import XCTest
 @testable import TBTestApp
 
 class MockSuccessFactsProvider: FactsProviding {
-    
-    func fetchFactsData(callback: @escaping (FactsData?, FactsError?) -> ()) {
+
+    func fetchFactsData(callback: @escaping (FactsData?, FactsError?) -> Void) {
         let data = FactsData(title: "About Canada", rows: [
             Fact(
                 title: "Fact title1",
@@ -28,22 +28,22 @@ class MockSuccessFactsProvider: FactsProviding {
 }
 
 class MockNetworkErrorFactsProvider: FactsProviding {
-    
-    func fetchFactsData(callback: @escaping (FactsData?, FactsError?) -> ()) {
+
+    func fetchFactsData(callback: @escaping (FactsData?, FactsError?) -> Void) {
         callback(nil, FactsError.networkUnavailable)
     }
 }
 
 class MockServerErrorFactsProvider: FactsProviding {
-    
-    func fetchFactsData(callback: @escaping (FactsData?, FactsError?) -> ()) {
+
+    func fetchFactsData(callback: @escaping (FactsData?, FactsError?) -> Void) {
         callback(nil, FactsError.serverError(statusCode: 500))
     }
 }
 
 class MockGenericErrorFactsProvider: FactsProviding {
-    
-    func fetchFactsData(callback: @escaping (FactsData?, FactsError?) -> ()) {
+
+    func fetchFactsData(callback: @escaping (FactsData?, FactsError?) -> Void) {
         callback(nil, FactsError.genericError)
     }
 }
