@@ -13,4 +13,3 @@ protocol FactsProviding {
     func fetchFactsData(
         callback:@escaping (_ result: FactsData?, _ error : FactsError?) -> ())
 }
-
