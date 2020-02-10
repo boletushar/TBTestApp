@@ -11,9 +11,9 @@ import XCTest
 @testable import TBTestApp
 
 class MockFactsDisplay: FactsDisplaying {
-    
+
     var expectation: XCTestExpectation?
-    
+
     private(set) var title: String = ""
     private(set) var facts: [Fact] = []
     func setDisplayData(_ data: FactsData) {
@@ -21,7 +21,7 @@ class MockFactsDisplay: FactsDisplaying {
         facts = data.rows
         expectation?.fulfill()
     }
-    
+
     private(set) var errorMessage: String = ""
     func showErrorMessage(_ message: String) {
         errorMessage = message

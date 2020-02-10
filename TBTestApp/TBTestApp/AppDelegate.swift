@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
-        
+
         // Register your classes with dependency injection container
         let container = Container()
         FactsDIContainer().registerClasses(with: container)
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension UIApplication {
-    
+
     static func topViewController(base: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return topViewController(base: nav.visibleViewController)
@@ -43,7 +43,7 @@ extension UIApplication {
         if let presented = base?.presentedViewController {
             return topViewController(base: presented)
         }
-        
+
         return base
     }
 }

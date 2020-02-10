@@ -10,11 +10,11 @@ import UIKit
 import Kingfisher
 
 final class FactTableViewCell: UITableViewCell {
-    
+
     let padding: CGFloat = 10
     let imageWidth: CGFloat = 60
     let imageHeight: CGFloat = 60
-    
+
     private let factTitleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -24,7 +24,7 @@ final class FactTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private let factDescriptionLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -34,7 +34,7 @@ final class FactTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private let factImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 60, height: 60))
         imageView.contentMode = .scaleAspectFill
@@ -46,11 +46,11 @@ final class FactTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+
         addSubview(factImageView)
         addSubview(factTitleLabel)
         addSubview(factDescriptionLabel)
-        
+
         let constraint = [
             factImageView.topAnchor.constraint(
                 equalTo: topAnchor,
@@ -84,22 +84,22 @@ final class FactTableViewCell: UITableViewCell {
                 equalTo: bottomAnchor,
                 constant: -padding),
             ]
-        
+
         NSLayoutConstraint.activate(constraint)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func prepareForReuse() {
         factImageView.image = nil
     }
-    
+
     func configure(_ fact: Fact) {
         factTitleLabel.text = fact.title
         factDescriptionLabel.text = fact.description
-        
+
         if let url = URL(string: fact.imageHref ?? "") {
             factImageView.kf.setImage(with: url)
         }

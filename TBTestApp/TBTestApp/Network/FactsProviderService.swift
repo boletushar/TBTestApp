@@ -14,7 +14,7 @@ enum FactsError: Error {
     case serverError(statusCode: Int)
     case parsingError
     case genericError
-    
+
     var localizedDescription: String {
         switch self {
         case .networkUnavailable:
@@ -31,47 +31,47 @@ enum FactsError: Error {
 class FactsProviderService: FactsProviding {
 
     // MARK: - Private variables
-    
+
     private let factsAPI =
         "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
-    
+
     // Function to fetch facts data
     func fetchFactsData(
         callback:@escaping (_ result: FactsData?, _ error : FactsError?) -> ()) {
-        
+
         guard NetworkMonitor.isConnectedToNetwork() else {
             callback(nil, FactsError.networkUnavailable)
             return
         }
-        
+
         guard let url = URL(string: factsAPI) else {
             callback(nil, FactsError.genericError)
             return
         }
-        
+
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        
+
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
+
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
                 callback(nil, FactsError.networkUnavailable)
                 return
             }
-            
+
             if 200...299 ~= statusCode {
-                
+
                 guard let dataResponse = data, error == nil else {
                     callback(nil, FactsError.serverError(statusCode: 0))
                     return
                 }
-                    
+
                 let string = String(decoding: dataResponse, as: UTF8.self)
                 guard let encodedData = string.data(using: .utf8) else {
                     callback(nil, FactsError.parsingError)
                     return
                 }
-               
+
                 guard let result = try? JSONDecoder().decode(
                     FactsData.self,
                     from: encodedData)
@@ -79,9 +79,9 @@ class FactsProviderService: FactsProviding {
                     callback(nil, FactsError.parsingError)
                     return
                 }
-                
+
                 callback(result, nil)
-                
+
             } else {
                 callback(nil, FactsError.serverError(statusCode: statusCode))
             }

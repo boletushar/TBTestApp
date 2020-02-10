@@ -7,7 +7,7 @@
 //
 
 protocol FactsProviding {
-    
+
     /// Function to fetch the Facts data
     /// - Parameter callback: callback holds FactsData and/or Error
     func fetchFactsData(

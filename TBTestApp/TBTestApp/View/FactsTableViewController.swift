@@ -9,33 +9,33 @@
 import UIKit
 
 final class FactsTableViewController: UITableViewController {
-    
+
     // Injectables
     var presenter: FactsPresenting?
-    
+
     // MARK: - Private variables
-    
+
     private var facts: [Fact] = []
-    
+
     private let cellIdentifier = "factsCell"
 
     // MARK: - View life cycle
-    
+
     override func loadView() {
         super.loadView()
         configureUI()
-        
+
         // Fetch the data
         presenter?.viewDidBecomeVisible()
     }
-    
+
     private func configureUI() {
         // Register custom TableView cell for use
         tableView.register(
             FactTableViewCell.self,
             forCellReuseIdentifier: cellIdentifier)
         tableView.separatorInset = .zero
-        
+
         // Initialise the Refresh control
         refreshControl = UIRefreshControl()
         // Set action for refresh control when user pull down the list
@@ -44,15 +44,15 @@ final class FactsTableViewController: UITableViewController {
             action: #selector(refresh),
             for: UIControl.Event.valueChanged)
     }
-    
+
     private func stopRefreshAnimation() {
-        
+
         DispatchQueue.main.async {
             // Stop animation of Refresh control if started
             self.refreshControl?.endRefreshing()
         }
     }
-    
+
     /// Objective C Function
     ///
     /// Fucntion to perform refresh action
@@ -74,7 +74,7 @@ final class FactsTableViewController: UITableViewController {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        
+
         let cell = tableView.dequeueReusableCell(
             withIdentifier: cellIdentifier,
             for: indexPath) as! FactTableViewCell
@@ -87,23 +87,23 @@ final class FactsTableViewController: UITableViewController {
 // MARK: - FactsDisplaying
 
 extension FactsTableViewController: FactsDisplaying {
-    
+
     func setDisplayData(_ data: FactsData) {
-        
+
         stopRefreshAnimation()
         facts = data.rows
-        
+
         DispatchQueue.main.async {
-            
+
             // Set the title of the screen
             self.title = data.title
             // Refresh table view
             self.tableView.reloadData()
         }
     }
-    
+
     func showErrorMessage(_ message: String) {
-        
+
         stopRefreshAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             AlertError.showMessage(

@@ -12,7 +12,7 @@ import UIKit
 class AlertError {
 
     static func showMessage(title: String, msg: String) {
-        
+
         let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertController.Style.alert)
         let action = UIAlertAction(
             title: NSLocalizedString("dialog.ok", comment: ""),
