@@ -14,7 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
 
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -35,7 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension UIApplication {
 
-    static func topViewController(base: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController) -> UIViewController? {
+    static func topViewController(
+        base: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
+    ) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return topViewController(base: nav.visibleViewController)
         }
