@@ -37,7 +37,7 @@ class FactsProviderService: FactsProviding {
 
     // Function to fetch facts data
     func fetchFactsData(
-        callback:@escaping (_ result: FactsData?, _ error : FactsError?) -> ()) {
+        callback:@escaping (_ result: FactsData?, _ error : FactsError?) -> Void) {
 
         guard NetworkMonitor.isConnectedToNetwork() else {
             callback(nil, FactsError.networkUnavailable)
