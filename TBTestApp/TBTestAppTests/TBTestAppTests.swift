@@ -34,7 +34,7 @@ class TBTestAppTests: XCTestCase {
 
     func mockRegistration() {
 
-        container.register(FactsProviding.self) { (resolver) -> FactsProviderService in
+        container.register(FactsProviding.self) { _ -> FactsProviderService in
             FactsProviderService()
         }
 

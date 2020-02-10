@@ -82,7 +82,7 @@ final class FactTableViewCell: UITableViewCell {
                 equalTo: factTitleLabel.trailingAnchor),
             factDescriptionLabel.bottomAnchor.constraint(
                 equalTo: bottomAnchor,
-                constant: -padding),
+                constant: -padding)
             ]
 
         NSLayoutConstraint.activate(constraint)
