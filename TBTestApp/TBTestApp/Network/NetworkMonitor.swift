@@ -9,9 +9,9 @@
 import Foundation
 import SystemConfiguration
 
-public class NetworkMonitor {
+class NetworkMonitor {
 
-    class func isConnectedToNetwork() -> Bool {
+    static func isConnectedToNetwork() -> Bool {
 
         var zeroAddress = sockaddr()
         zeroAddress.sa_len = UInt8(MemoryLayout<sockaddr>.size)

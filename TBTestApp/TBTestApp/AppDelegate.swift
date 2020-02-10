@@ -23,7 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let container = Container()
         FactsDIContainer().registerClasses(with: container)
 
+        // swiftlint:disable force_cast
         let viewController = container.resolve(FactsDisplaying.self) as! FactsTableViewController
+        // swiftlint:enable force_cast
         let navigationController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

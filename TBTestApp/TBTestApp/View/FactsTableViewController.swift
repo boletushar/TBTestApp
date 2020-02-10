@@ -75,9 +75,13 @@ final class FactsTableViewController: UITableViewController {
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(
+        guard
+            let cell = tableView.dequeueReusableCell(
             withIdentifier: cellIdentifier,
-            for: indexPath) as! FactTableViewCell
+            for: indexPath) as? FactTableViewCell
+        else {
+            return UITableViewCell()
+        }
         let fact = facts[indexPath.row]
         cell.configure(fact)
         return cell
