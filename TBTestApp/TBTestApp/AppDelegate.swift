@@ -41,10 +41,11 @@ extension UIApplication {
     static func topViewController(
         base: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController
     ) -> UIViewController? {
-        if let nav = base as? UINavigationController {
-            return topViewController(base: nav.visibleViewController)
+        if let navigationController = base as? UINavigationController {
+            return topViewController(base: navigationController.visibleViewController)
         }
-        if let tab = base as? UITabBarController, let selected = tab.selectedViewController {
+        if let tabController = base as? UITabBarController,
+            let selected = tabController.selectedViewController {
             return topViewController(base: selected)
         }
         if let presented = base?.presentedViewController {

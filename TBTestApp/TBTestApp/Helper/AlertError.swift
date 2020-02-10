@@ -11,11 +11,11 @@ import UIKit
 
 class AlertError {
 
-    static func showMessage(title: String, msg: String) {
+    static func showMessage(title: String, message: String) {
 
         let alert = UIAlertController(
             title: title,
-            message: msg,
+            message: message,
             preferredStyle: UIAlertController.Style.alert)
         let action = UIAlertAction(
             title: NSLocalizedString("dialog.ok", comment: ""),

@@ -112,7 +112,7 @@ extension FactsTableViewController: FactsDisplaying {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             AlertError.showMessage(
             title: NSLocalizedString("dialog.title", comment: ""),
-            msg: message)
+            message: message)
         }
     }
 }
