@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3CDDDE86407983CF3991DC03 /* Pods_TBTestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4266236D47302207008C85C1 /* Pods_TBTestAppTests.framework */; };
-		C3DD152623F1418200E26BE5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C3DD152523F1418200E26BE5 /* .swiftlint.yml */; };
 		C3E8DE5F23ED0C86000CBFEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8DE5E23ED0C86000CBFEE /* AppDelegate.swift */; };
 		C3E8DE6823ED0C89000CBFEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3E8DE6723ED0C89000CBFEE /* Assets.xcassets */; };
 		C3E8DE6B23ED0C89000CBFEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E8DE6923ED0C89000CBFEE /* LaunchScreen.storyboard */; };
@@ -45,7 +44,6 @@
 		4266236D47302207008C85C1 /* Pods_TBTestAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TBTestAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4404D57ABA6ED29366044208 /* Pods-TBTestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBTestAppTests.release.xcconfig"; path = "Target Support Files/Pods-TBTestAppTests/Pods-TBTestAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		91297A701C7C1905569A9791 /* Pods-TBTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBTestApp.release.xcconfig"; path = "Target Support Files/Pods-TBTestApp/Pods-TBTestApp.release.xcconfig"; sourceTree = "<group>"; };
-		C3DD152523F1418200E26BE5 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C3E8DE5B23ED0C86000CBFEE /* TBTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E8DE5E23ED0C86000CBFEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3E8DE6723ED0C89000CBFEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 		C3E8DE5223ED0C86000CBFEE = {
 			isa = PBXGroup;
 			children = (
-				C3DD152523F1418200E26BE5 /* .swiftlint.yml */,
 				C3E8DE5D23ED0C86000CBFEE /* TBTestApp */,
 				C3E8DEAD23ED652F000CBFEE /* TBTestAppTests */,
 				C3E8DE5C23ED0C86000CBFEE /* Products */,
@@ -311,7 +308,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3DD152623F1418200E26BE5 /* .swiftlint.yml in Resources */,
 				C3E8DE6B23ED0C89000CBFEE /* LaunchScreen.storyboard in Resources */,
 				C3E8DE9223ED4B8D000CBFEE /* Localizable.strings in Resources */,
 				C3E8DE6823ED0C89000CBFEE /* Assets.xcassets in Resources */,
