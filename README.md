@@ -9,8 +9,9 @@ This app is created to demonstrate how to display content in TableView using Tab
 - [x] URLSession is used to fetch data from the API 
 - [x] Kingfisher framework is used to download Images
 - [x] Swinject is used for Dependency Injection
+- [x] Swiftlint is used for code linting. 
 
-## System Requirements
+## System/Tool Requirements
 1. MacBook
 2. XCode 11 (11.3 used to create this project)
 3. Install Cocoapod (Optional as I've added Pods to the repository)
